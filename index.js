@@ -39,7 +39,7 @@ if (mainOptions.command === undefined || mainOptions.help) {
 		{
 			header: "Commands",
 			content: [
-				{ name: 'unpack', summary: 'Unpacks a {.rbxlx} file' },
+				{ name: 'unpack', summary: 'Unpacks a .rbxlx file' },
 			]
 		}
 	]))
