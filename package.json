@@ -1,6 +1,5 @@
 {
   "name": "ropa",
-  "version": "1.0.0",
   "description": "A utility to parse Roblox files and make them git-friendly.",
   "main": "index.js",
   "bin": {
