@@ -52,6 +52,8 @@ if (mainOptions.command === undefined || mainOptions.help) {
 
 		unpack("roblox", output["roblox"])
 	}
+} else if (mainOptions.command === "pack") {
+	console.log("TODO: pack command")
 } else {
 	console.log(`'%s' is not a valid command.`, mainOptions.command)
 }
