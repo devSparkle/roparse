@@ -26,6 +26,5 @@
     "command-line-args": "^5.2.1",
     "fast-xml-parser": "^4.0.9",
     "shelljs": "^0.8.5"
-  },
-  "version": "0.1.1"
+  }
 }
