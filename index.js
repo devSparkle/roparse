@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 var shell = require("shelljs");
 const commandLineArgs = require('command-line-args')
+const commandLineUsage = require('command-line-usage')
 const { XMLParser, XMLBuilder, XMLValidator } = require("fast-xml-parser");
 
 /* XML parser configuration */
@@ -20,7 +21,28 @@ const argv = mainOptions._unknown || []
 
 /* Process command */
 if (mainOptions.command === undefined || mainOptions.help) {
-	console.log("TODO: help command")
+	console.log(commandLineUsage([
+		{
+			header: "Roblox File Parser",
+			content: "A utility to parse Roblox files and make them git-friendly."
+		},
+		{
+			header: "Options",
+			optionList: [
+				{
+					name: "help",
+					alias: "h",
+					description: "Displays a help page about the current command"
+				}
+			]
+		},
+		{
+			header: "Commands",
+			content: [
+				{ name: 'unpack', summary: 'Unpacks a .rbxlx file' },
+			]
+		}
+	]))
 } else if (mainOptions.command === "unpack") {
 	var xmlDataStr = shell.cat("./place.rbxlx")
 
