@@ -8,10 +8,10 @@
   "scripts": {
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/devSparkle/roparse.git"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
+  "repository": "git://github.com/devSparkle/roparse.git",
   "keywords": [
     "roblox",
     "git"
