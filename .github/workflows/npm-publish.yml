@@ -18,15 +18,18 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  publish-npm:
+  publish-gpr:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://npm.pkg.github.com/
       - name: setup git
         run: |
           git config user.name "GitHub Actions"
@@ -35,4 +38,4 @@ jobs:
       - run: npm version from-git
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

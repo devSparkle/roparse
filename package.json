@@ -1,5 +1,5 @@
 {
-  "name": "roparse",
+  "name": "@devsparkle/roparse",
   "description": "A utility to parse Roblox files and make them git-friendly.",
   "main": "index.js",
   "bin": {
