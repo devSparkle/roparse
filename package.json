@@ -1,18 +1,17 @@
 {
-  "name": "ropa",
-  "version": "1.0.0",
+  "name": "@devsparkle/roparse",
   "description": "A utility to parse Roblox files and make them git-friendly.",
   "main": "index.js",
   "bin": {
-    "ropa": "index.js"
+    "roparse": "index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Warning: no test specified\" && exit 0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/devSparkle/ropa.git"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
+  "repository": "git://github.com/devSparkle/roparse.git",
   "keywords": [
     "roblox",
     "git"
@@ -20,9 +19,9 @@
   "author": "Ricardo Loureiro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/devSparkle/ropa/issues"
+    "url": "https://github.com/devSparkle/roparse/issues"
   },
-  "homepage": "https://github.com/devSparkle/ropa#readme",
+  "homepage": "https://github.com/devSparkle/roparse#readme",
   "dependencies": {
     "command-line-args": "^5.2.1",
     "fast-xml-parser": "^4.0.9",
