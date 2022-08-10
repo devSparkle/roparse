@@ -27,6 +27,10 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - name: setup git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "<>"
       - run: npm ci
       - run: npm version from-git
       - run: npm publish
